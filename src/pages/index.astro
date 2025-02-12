@@ -1,0 +1,23 @@
+---
+import Footer from "../components/Footer.astro";
+import Hero from "@/components/Hero.astro";
+import Navbar from "../components/Navbar.astro";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+const date = new Date().getFullYear();
+---
+
+<Layout>
+  <Navbar />
+  <main class="min-h-full  flex flex-col">
+    <Hero />
+    <Welcome />
+    <!-- <AboutMe /> -->
+    
+    <!-- <footer class="bg-spud-skin text-gravy py-4 text-center">
+      <p>&copy; {date} der Kartoffel. All rights reserved. 🥔</p>
+      </footer> -->
+    </main>
+    <Footer/>
+
+</Layout>

@@ -1,0 +1,36 @@
+---
+import Github from "@/assets/github.svg";
+import {Image} from "astro:assets"
+
+const date = new Date().getFullYear();
+
+const logos = [
+  {
+    name: "Github",
+    src: Github,
+    link: "https://github.com/Ahmad-Mtr"
+  },
+];
+
+---
+
+<footer
+  class="flex flex-col items-center container mx-auto text-center gap-10 "
+>
+&copy; {date} der Kartoffel. All rights reserved. 🥔
+  <div class="flex items-center gap-6 text-5xl">
+    
+  {
+    logos.map((logo) => (
+    <a href={logo.link} target="_blank" class="">
+      <picture>
+        <Image src={logo.src} alt={logo.name} class={""}/>
+      </picture>
+    </a>
+    ))
+  }    
+    
+      
+    
+  </div>
+</footer>

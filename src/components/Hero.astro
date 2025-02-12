@@ -1,0 +1,35 @@
+---
+import Section from "./Section.astro";
+import { Image } from "astro:assets";
+import HeroPic from "@/assets/Fire.webp";
+---
+
+<Section id="about" className=" min-h-96">
+  <div
+    class="relative flex flex-col-reverse items-center justify-between pl-6 md:flex-row mt-7"
+    id="hero"
+  >
+    <div class="row items-center py-10 md:w-6/12">
+      <div class="text-left text-md space-y-8 py-4">
+        <h1 class="">Crafting Code, One Potato at a Time</h1>
+        <p class="text-6xl font-extrabold">Der Kartoffel.</p>
+        <p class="text-xl">
+          A passionate developer who loves building sleek, user-friendly digital
+          experiences. From frontend to backend, Der Kartoffel delivers daily
+          doses of internet content. Follow for more potatoes.
+        </p>
+        <a href="https://it.gju.app" target="_blank" class="action-btn ">
+          Work together
+        </a>
+      </div>
+    </div>
+    <div class="flex items-center py-5 w-full md:w-[500px]">
+      <Image
+        src={HeroPic}
+        alt="Hero Ilustration"
+        loading="eager"
+        class={" w-full"}
+      />
+    </div>
+  </div>
+</Section>
